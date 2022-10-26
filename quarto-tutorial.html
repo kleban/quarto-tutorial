@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.1.251">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Юрій Клебан">
+
+<title>Інструкція з використання Quarto для підготовки результатів наукових досліджень</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1.6em;
+  vertical-align: middle;
+}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { color: #008000; } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { color: #008000; font-weight: bold; } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+</style>
+
+
+<script src="quarto-tutorial_files/libs/clipboard/clipboard.min.js"></script>
+<script src="quarto-tutorial_files/libs/quarto-html/quarto.js"></script>
+<script src="quarto-tutorial_files/libs/quarto-html/popper.min.js"></script>
+<script src="quarto-tutorial_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="quarto-tutorial_files/libs/quarto-html/anchor.min.js"></script>
+<link href="quarto-tutorial_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="quarto-tutorial_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="quarto-tutorial_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="quarto-tutorial_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="quarto-tutorial_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Інструкція з використання Quarto для підготовки результатів наукових досліджень</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Юрій Клебан </p>
+          </div>
+  </div>
+    
+    
+  </div>
+  
+
+</header>
+
+<div class="callout-important callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Увага! У тексті публікації зустрічастимуться подібні вставки, вони не є частиною контенту, а використані для звернення уваги студентів на деякі моменти підготовки роботи. Не потрібно подібні вставки використовувати під час написання звіту.</p>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Зверху справа можна переглянути “початковий” код розмітки цього документа і користуватися ним для підготовки алсної публікації: <code>&lt;/&gt; Code</code>.</p>
+</div>
+</div>
+<hr>
+<section id="анотація" class="level4">
+<h4 class="anchored" data-anchor-id="анотація">Анотація</h4>
+<p>У статті описано процес підготовки матеріалів фінального проєкту з використанням технології <a href="https://quarto.org"><code>Quarto</code></a>. <code>Quarto</code> дозволяє аналітикам та науковцям обєднати текстові, графічні матеріали та виконуваний код в один документ.</p>
+<p>Увага! Quarto побудовано на основі <code>rMarkdown</code> і відмінності мінімальні.</p>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Розширити анотацію до 250 символів. Перевірити кількість символів, наприклад, можна вставивши текст у <code>Notepad</code> або <code>Microsoft Word</code>.</p>
+</div>
+</div>
+</section>
+<section id="ключові-слова" class="level4">
+<h4 class="anchored" data-anchor-id="ключові-слова">Ключові слова</h4>
+<p><code>quarto</code>, <code>r</code>, <code>RStudio Desktop</code>, <code>підготовка звітів</code>, <code>фінальний проєкт</code>.</p>
+</section>
+<section id="основна-частина" class="level2">
+<h2 class="anchored" data-anchor-id="основна-частина">Основна частина</h2>
+<section id="інсталяція" class="level3">
+<h3 class="anchored" data-anchor-id="інсталяція">Інсталяція</h3>
+<p>Першим етапом роботи з технологією <code>Quarto</code> є інсталяція. Окрім уже встановлених на ПК <code>R</code> та <code>RStudio</code> потрібно завантажиити та виконати кроки зі встановлення <a href="https://quarto.org/docs/get-started/"><code>Quarto CLI</code></a> (<code>Command Line Interface</code>) для запуску операцій рендерінгу розмітки та ноутбуків.</p>
+<p>Наступний етап передбачає вибір інструменту для написання коду: <code>Visual Studio Code</code>, <code>RStudio Desktop</code>, <code>Jupyter Notebook\Lab</code> або будь-який текстовий редактор.</p>
+</section>
+<section id="початок-роботи-з-документом" class="level3">
+<h3 class="anchored" data-anchor-id="початок-роботи-з-документом">Початок роботи з документом</h3>
+<p>Для початку роботи варто ініціалізувати заголовок документа, вказавши інформацію про публікацію та автора/ів. Також у заголовку можуть бути додані додаткові параметри налаштування документа.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="sc">---</span></span>
+<span id="cb1-2"><a href="#cb1-2"></a>title<span class="sc">:</span> <span class="st">"Інструкція з використання Quarto для підготовки результатів наукових досліджень"</span></span>
+<span id="cb1-3"><a href="#cb1-3"></a>author<span class="sc">:</span> <span class="st">"Юрій Клебан"</span></span>
+<span id="cb1-4"><a href="#cb1-4"></a>format<span class="sc">:</span> </span>
+<span id="cb1-5"><a href="#cb1-5"></a>  html<span class="sc">:</span></span>
+<span id="cb1-6"><a href="#cb1-6"></a>    code<span class="sc">-</span>fold<span class="sc">:</span> true <span class="co"># дозволяє отримати згорнутий код</span></span>
+<span id="cb1-7"><a href="#cb1-7"></a>    code<span class="sc">-</span>tools<span class="sc">:</span> true <span class="co"># додає зверху справа публікації кнопку для перегляду початкового коду розмітки</span></span>
+<span id="cb1-8"><a href="#cb1-8"></a>    code<span class="sc">-</span>line<span class="sc">-</span>numbers<span class="sc">:</span> true <span class="co"># показує номери рядків коду у блоках</span></span>
+<span id="cb1-9"><a href="#cb1-9"></a>execute<span class="sc">:</span></span>
+<span id="cb1-10"><a href="#cb1-10"></a>  echo<span class="sc">:</span> false <span class="co"># приховує весь код, лишає тільки результати обчислень</span></span>
+<span id="cb1-11"><a href="#cb1-11"></a><span class="sc">---</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>Зверніть увагу, якщо Ви бажаєте візуалізувати деякі дані, що не мають виконуваного коду, то варто скористатися записом без <code>{}</code> (фігурних дужок), а замість <code>r</code> можна вписати і іншу мову програмування:</p>
+<pre><code>
+```r
+# Приклад візуалізації коду "як є".
+```
+</code></pre>
+<p>Якщо ж код має виконуватися, то є кілька варіантів його представлення:</p>
+<ol type="1">
+<li>Якщо потрібно вивести і код і результат у документ, то вказуємо <code>{r}</code>:</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+<p>Виведення тільки результату, без коду:</p>
+<div class="cell">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 10</code></pre>
+</div>
+</div>
+<div class="callout-note callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Використовуйте <code>echo</code>, адже ми формуємо наукову публікацію, а не ноутбук!</p>
+</div>
+</div>
+<p>Якщо Вам потрібно прямо у тексті роботи вивести результати обчислень, то можна скористатися записом типу 3.16 та отримати 3.16, тобто очислення будуь відбуватися “на льоту”.</p>
+</section>
+<section id="оформлення-текстів" class="level3">
+<h3 class="anchored" data-anchor-id="оформлення-текстів">Оформлення текстів</h3>
+<p>Оформлення текствої інформації</p>
+</section>
+<section id="публікація-зображень" class="level3">
+<h3 class="anchored" data-anchor-id="публікація-зображень">Публікація зображень</h3>
+</section>
+<section id="табличне-представлення-даних" class="level3">
+<h3 class="anchored" data-anchor-id="табличне-представлення-даних">Табличне представлення даних</h3>
+<p>Візуалізація табличної інформації може бути представлена двома способами:</p>
+<p>-[x] у вигляді розмітки;</p>
+<p>-[x] візуалізація датафрейму.</p>
+<pre><code>| fruit  | price  |
+|--------|--------:
+| apple  | 2.05   |
+| pear   | 1.37   |
+| orange | 3.09   |
+
+: Ціна на фрукти {tbl-colwidths="[60,40]"}</code></pre>
+<p>Для публікації інформації з наявного датафрейму можна використовувати використати звичайну виведення:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>  mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>               mpg cyl disp  hp drat
+Mazda RX4     21.0   6  160 110 3.90
+Mazda RX4 Wag 21.0   6  160 110 3.90
+Datsun 710    22.8   4  108  93 3.85</code></pre>
+</div>
+</div>
+<p>Проте візуально інформацію зручніше візуалізувати за допомогою функції <code>knitr::kable()</code> та з використання спеціальних підписів у заголовку коду:</p>
+<div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb8-2"><a href="#cb8-2"></a>  mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb8-3"><a href="#cb8-3"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-anonymous-5622292" class="cell tbl-cap-location-top tbl-parent quarto-layout-panel anchored">
+<div class="panel-caption table-caption">
+<p>Назва таблиці</p>
+</div>
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div id="tbl-anonymous-5622292-1" class="quarto-layout-cell quarto-layout-cell-subref anchored" data-ref-parent="tbl-anonymous-5622292" style="flex-basis: 100.0%;justify-content: center;">
+<table class="table table-sm table-striped">
+<caption>Джерело: дані з пакету carData</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;"></th>
+<th style="text-align: right;">mpg</th>
+<th style="text-align: right;">cyl</th>
+<th style="text-align: right;">disp</th>
+<th style="text-align: right;">hp</th>
+<th style="text-align: right;">drat</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Mazda RX4</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.90</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mazda RX4 Wag</td>
+<td style="text-align: right;">21.0</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">160</td>
+<td style="text-align: right;">110</td>
+<td style="text-align: right;">3.90</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Datsun 710</td>
+<td style="text-align: right;">22.8</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">108</td>
+<td style="text-align: right;">93</td>
+<td style="text-align: right;">3.85</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="побудова-діаграм-та-графіків" class="level3">
+<h3 class="anchored" data-anchor-id="побудова-діаграм-та-графіків">Побудова діаграм та графіків</h3>
+<div id="fig-cap-margin" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb9-2"><a href="#cb9-2"></a>mtcars2 <span class="ot">&lt;-</span> mtcars</span>
+<span id="cb9-3"><a href="#cb9-3"></a>mtcars2<span class="sc">$</span>am <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb9-4"><a href="#cb9-4"></a>  mtcars<span class="sc">$</span>am, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'automatic'</span>, <span class="st">'manual'</span>)</span>
+<span id="cb9-5"><a href="#cb9-5"></a>)</span>
+<span id="cb9-6"><a href="#cb9-6"></a><span class="fu">ggplot</span>(mtcars2, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
+<span id="cb9-7"><a href="#cb9-7"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>) <span class="sc">+</span></span>
+<span id="cb9-8"><a href="#cb9-8"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'bottom'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="fig-cap-margin" class="quarto-figure quarto-figure-center anchored">
+<figure class="figure">
+<p><img src="quarto-tutorial_files/figure-html/fig-cap-margin-1.png" class="img-fluid figure-img" data-ref-parent="fig-cap-margin" width="672"></p>
+<p></p><figcaption class="figure-caption">(a) Дані з пакету <code>CarData</code></figcaption><p></p>
+</figure>
+</div>
+</div>
+<p></p><figcaption class="figure-caption">Figure&nbsp;1: MPG vs horsepower, colored by transmission.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="формули-та-числові-позначення" class="level3">
+<h3 class="anchored" data-anchor-id="формули-та-числові-позначення">Формули та числові позначення</h3>
+</section>
+</section>
+<section id="висновки" class="level2">
+<h2 class="anchored" data-anchor-id="висновки">Висновки</h2>
+</section>
+<section id="список-використаних-джерел" class="level2">
+<h2 class="anchored" data-anchor-id="список-використаних-джерел">Список використаних джерел</h2>
+<ol type="1">
+<li>https://quarto.org/</li>
+</ol>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<!-- -->
+
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    target: function(trigger) {
+      return trigger.previousElementSibling;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    setTimeout(function() {
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  const viewSource = window.document.getElementById('quarto-view-source') ||
+                     window.document.getElementById('quarto-code-tools-source');
+  if (viewSource) {
+    const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+    viewSource.addEventListener("click", function(e) {
+      if (sourceUrl) {
+        // rstudio viewer pane
+        if (/\bcapabilities=\b/.test(window.location)) {
+          window.open(sourceUrl);
+        } else {
+          window.location.href = sourceUrl;
+        }
+      } else {
+        const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+        modal.show();
+      }
+      return false;
+    });
+  }
+  function toggleCodeHandler(show) {
+    return function(e) {
+      const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+      for (let i=0; i<detailsSrc.length; i++) {
+        const details = detailsSrc[i].parentElement;
+        if (show) {
+          details.open = true;
+        } else {
+          details.removeAttribute("open");
+        }
+      }
+      const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+      const fromCls = show ? "hidden" : "unhidden";
+      const toCls = show ? "unhidden" : "hidden";
+      for (let i=0; i<cellCodeDivs.length; i++) {
+        const codeDiv = cellCodeDivs[i];
+        if (codeDiv.classList.contains(fromCls)) {
+          codeDiv.classList.remove(fromCls);
+          codeDiv.classList.add(toCls);
+        } 
+      }
+      return false;
+    }
+  }
+  const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+  if (hideAllCode) {
+    hideAllCode.addEventListener("click", toggleCodeHandler(false));
+  }
+  const showAllCode = window.document.getElementById("quarto-show-all-code");
+  if (showAllCode) {
+    showAllCode.addEventListener("click", toggleCodeHandler(true));
+  }
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+    tippyHover(ref, function() {
+      var popup = window.document.createElement('div');
+      cites.forEach(function(cite) {
+        var citeDiv = window.document.createElement('div');
+        citeDiv.classList.add('hanging-indent');
+        citeDiv.classList.add('csl-entry');
+        var biblioDiv = window.document.getElementById('ref-' + cite);
+        if (biblioDiv) {
+          citeDiv.innerHTML = biblioDiv.innerHTML;
+        }
+        popup.appendChild(citeDiv);
+      });
+      return popup.innerHTML;
+    });
+  }
+});
+</script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="sourceCode" id="cb12" data-shortcodes="false"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1"></a><span class="co">---</span></span>
+<span id="cb12-2"><a href="#cb12-2"></a><span class="an">title:</span><span class="co"> "Інструкція з використання Quarto для підготовки результатів наукових досліджень"</span></span>
+<span id="cb12-3"><a href="#cb12-3"></a><span class="an">author:</span><span class="co"> "Юрій Клебан"</span></span>
+<span id="cb12-4"><a href="#cb12-4"></a><span class="an">format:</span><span class="co"> </span></span>
+<span id="cb12-5"><a href="#cb12-5"></a><span class="co">  html:</span></span>
+<span id="cb12-6"><a href="#cb12-6"></a><span class="co">    code-tools: true</span></span>
+<span id="cb12-7"><a href="#cb12-7"></a><span class="co">    code-line-numbers: true</span></span>
+<span id="cb12-8"><a href="#cb12-8"></a><span class="co">---</span></span>
+<span id="cb12-9"><a href="#cb12-9"></a></span>
+<span id="cb12-10"><a href="#cb12-10"></a>:::{.callout-important}</span>
+<span id="cb12-11"><a href="#cb12-11"></a>Увага! У тексті публікації зустрічастимуться подібні вставки, вони не є частиною контенту, а використані для звернення уваги студентів на деякі моменти підготовки роботи. Не потрібно подібні вставки використовувати під час написання звіту.</span>
+<span id="cb12-12"><a href="#cb12-12"></a>:::</span>
+<span id="cb12-13"><a href="#cb12-13"></a></span>
+<span id="cb12-14"><a href="#cb12-14"></a>:::{.callout-note}</span>
+<span id="cb12-15"><a href="#cb12-15"></a>Зверху справа можна переглянути "початковий" код розмітки цього документа і користуватися ним для підготовки алсної публікації: <span class="in">`&lt;/&gt; Code`</span>.</span>
+<span id="cb12-16"><a href="#cb12-16"></a>:::</span>
+<span id="cb12-17"><a href="#cb12-17"></a></span>
+<span id="cb12-18"><a href="#cb12-18"></a>---</span>
+<span id="cb12-19"><a href="#cb12-19"></a></span>
+<span id="cb12-20"><a href="#cb12-20"></a><span class="fu">#### Анотація</span></span>
+<span id="cb12-21"><a href="#cb12-21"></a></span>
+<span id="cb12-22"><a href="#cb12-22"></a>У статті описано процес підготовки матеріалів фінального проєкту з використанням технології <span class="co">[</span><span class="ot">`Quarto`</span><span class="co">](https://quarto.org)</span>. <span class="in">`Quarto`</span> дозволяє аналітикам та науковцям обєднати текстові, графічні матеріали та виконуваний код в один документ.</span>
+<span id="cb12-23"><a href="#cb12-23"></a></span>
+<span id="cb12-24"><a href="#cb12-24"></a>Увага! Quarto побудовано на основі <span class="in">`rMarkdown`</span> і відмінності мінімальні.</span>
+<span id="cb12-25"><a href="#cb12-25"></a></span>
+<span id="cb12-26"><a href="#cb12-26"></a>:::{.callout-note}</span>
+<span id="cb12-27"><a href="#cb12-27"></a>Розширити анотацію до 250 символів. Перевірити кількість символів, наприклад, можна вставивши текст у <span class="in">`Notepad`</span> або <span class="in">`Microsoft Word`</span>.</span>
+<span id="cb12-28"><a href="#cb12-28"></a>:::</span>
+<span id="cb12-29"><a href="#cb12-29"></a></span>
+<span id="cb12-30"><a href="#cb12-30"></a><span class="fu">#### Ключові слова</span></span>
+<span id="cb12-31"><a href="#cb12-31"></a></span>
+<span id="cb12-32"><a href="#cb12-32"></a><span class="in">`quarto`</span>, <span class="in">`r`</span>, <span class="in">`RStudio Desktop`</span>, <span class="in">`підготовка звітів`</span>, <span class="in">`фінальний проєкт`</span>.</span>
+<span id="cb12-33"><a href="#cb12-33"></a></span>
+<span id="cb12-34"><a href="#cb12-34"></a><span class="fu">## Основна частина</span></span>
+<span id="cb12-35"><a href="#cb12-35"></a></span>
+<span id="cb12-36"><a href="#cb12-36"></a><span class="fu">### Інсталяція</span></span>
+<span id="cb12-37"><a href="#cb12-37"></a></span>
+<span id="cb12-38"><a href="#cb12-38"></a>Першим етапом роботи з технологією <span class="in">`Quarto`</span> є інсталяція. Окрім уже встановлених на ПК <span class="in">`R`</span> та <span class="in">`RStudio`</span> потрібно завантажиити та виконати кроки зі встановлення <span class="co">[</span><span class="ot">`Quarto CLI`</span><span class="co">](https://quarto.org/docs/get-started/)</span> (<span class="in">`Command Line Interface`</span>) для запуску операцій рендерінгу розмітки та ноутбуків.</span>
+<span id="cb12-39"><a href="#cb12-39"></a></span>
+<span id="cb12-40"><a href="#cb12-40"></a>Наступний етап передбачає вибір інструменту для написання коду: <span class="in">`Visual Studio Code`</span>, <span class="in">`RStudio Desktop`</span>, <span class="in">`Jupyter Notebook\Lab`</span> або будь-який текстовий редактор. </span>
+<span id="cb12-41"><a href="#cb12-41"></a></span>
+<span id="cb12-42"><a href="#cb12-42"></a><span class="fu">### Початок роботи з документом</span></span>
+<span id="cb12-43"><a href="#cb12-43"></a></span>
+<span id="cb12-44"><a href="#cb12-44"></a>Для початку роботи варто ініціалізувати заголовок документа, вказавши інформацію про публікацію та автора/ів. Також у заголовку можуть бути додані додаткові параметри налаштування документа.</span>
+<span id="cb12-45"><a href="#cb12-45"></a></span>
+<span id="cb12-46"><a href="#cb12-46"></a><span class="in">```r</span></span>
+<span id="cb12-47"><a href="#cb12-47"></a><span class="sc">---</span></span>
+<span id="cb12-48"><a href="#cb12-48"></a>title<span class="sc">:</span> <span class="st">"Інструкція з використання Quarto для підготовки результатів наукових досліджень"</span></span>
+<span id="cb12-49"><a href="#cb12-49"></a>author<span class="sc">:</span> <span class="st">"Юрій Клебан"</span></span>
+<span id="cb12-50"><a href="#cb12-50"></a>format<span class="sc">:</span> </span>
+<span id="cb12-51"><a href="#cb12-51"></a>  html<span class="sc">:</span></span>
+<span id="cb12-52"><a href="#cb12-52"></a>    code<span class="sc">-</span>fold<span class="sc">:</span> true <span class="co"># дозволяє отримати згорнутий код</span></span>
+<span id="cb12-53"><a href="#cb12-53"></a>    code<span class="sc">-</span>tools<span class="sc">:</span> true <span class="co"># додає зверху справа публікації кнопку для перегляду початкового коду розмітки</span></span>
+<span id="cb12-54"><a href="#cb12-54"></a>    code<span class="sc">-</span>line<span class="sc">-</span>numbers<span class="sc">:</span> true <span class="co"># показує номери рядків коду у блоках</span></span>
+<span id="cb12-55"><a href="#cb12-55"></a>execute<span class="sc">:</span></span>
+<span id="cb12-56"><a href="#cb12-56"></a>  echo<span class="sc">:</span> false <span class="co"># приховує весь код, лишає тільки результати обчислень</span></span>
+<span id="cb12-57"><a href="#cb12-57"></a><span class="sc">---</span></span>
+<span id="cb12-58"><a href="#cb12-58"></a><span class="in">```</span></span>
+<span id="cb12-59"><a href="#cb12-59"></a></span>
+<span id="cb12-60"><a href="#cb12-60"></a>Зверніть увагу, якщо Ви бажаєте візуалізувати деякі дані, що не мають виконуваного коду, то варто скористатися записом без <span class="in">`{}`</span> (фігурних дужок), а замість <span class="in">`r`</span> можна вписати і іншу мову програмування:</span>
+<span id="cb12-61"><a href="#cb12-61"></a></span>
+<span id="cb12-62"><a href="#cb12-62"></a><span class="kw">&lt;pre&gt;&lt;code&gt;</span></span>
+<span id="cb12-63"><a href="#cb12-63"></a><span class="in">```r</span></span>
+<span id="cb12-64"><a href="#cb12-64"></a><span class="co"># Приклад візуалізації коду "як є".</span></span>
+<span id="cb12-65"><a href="#cb12-65"></a><span class="in">```</span></span>
+<span id="cb12-66"><a href="#cb12-66"></a><span class="kw">&lt;/code&gt;&lt;/pre&gt;</span></span>
+<span id="cb12-67"><a href="#cb12-67"></a></span>
+<span id="cb12-68"><a href="#cb12-68"></a>Якщо ж код має виконуватися, то є кілька варіантів його представлення:</span>
+<span id="cb12-69"><a href="#cb12-69"></a></span>
+<span id="cb12-70"><a href="#cb12-70"></a><span class="ss">1. </span>Якщо потрібно вивести і код і результат у документ, то вказуємо <span class="in">`{r}`</span>:</span>
+<span id="cb12-71"><a href="#cb12-71"></a></span>
+<span id="cb12-74"><a href="#cb12-74"></a><span class="in">```{r}</span></span>
+<span id="cb12-75"><a href="#cb12-75"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb12-76"><a href="#cb12-76"></a>x</span>
+<span id="cb12-77"><a href="#cb12-77"></a><span class="in">```</span></span>
+<span id="cb12-78"><a href="#cb12-78"></a></span>
+<span id="cb12-79"><a href="#cb12-79"></a>Виведення тільки результату, без коду:</span>
+<span id="cb12-80"><a href="#cb12-80"></a></span>
+<span id="cb12-83"><a href="#cb12-83"></a><span class="in">```{r}</span></span>
+<span id="cb12-84"><a href="#cb12-84"></a><span class="co">#| echo: false</span></span>
+<span id="cb12-85"><a href="#cb12-85"></a>x <span class="ot">&lt;-</span> <span class="dv">10</span></span>
+<span id="cb12-86"><a href="#cb12-86"></a>x</span>
+<span id="cb12-87"><a href="#cb12-87"></a><span class="in">```</span></span>
+<span id="cb12-88"><a href="#cb12-88"></a></span>
+<span id="cb12-89"><a href="#cb12-89"></a>:::{.callout-note}</span>
+<span id="cb12-90"><a href="#cb12-90"></a>Використовуйте <span class="in">`echo`</span>, адже ми формуємо наукову публікацію, а не ноутбук!</span>
+<span id="cb12-91"><a href="#cb12-91"></a>:::</span>
+<span id="cb12-92"><a href="#cb12-92"></a></span>
+<span id="cb12-93"><a href="#cb12-93"></a>Якщо Вам потрібно прямо у тексті роботи вивести результати обчислень, то можна скористатися записом типу <span class="in">`r round(sqrt(x), 2)`</span> та отримати <span class="in">`r round(sqrt(x), 2)`</span>, тобто очислення будуь відбуватися "на льоту".</span>
+<span id="cb12-94"><a href="#cb12-94"></a></span>
+<span id="cb12-95"><a href="#cb12-95"></a><span class="fu">### Оформлення текстів</span></span>
+<span id="cb12-96"><a href="#cb12-96"></a></span>
+<span id="cb12-97"><a href="#cb12-97"></a>Оформлення текствої інформації</span>
+<span id="cb12-98"><a href="#cb12-98"></a></span>
+<span id="cb12-99"><a href="#cb12-99"></a><span class="fu">### Публікація зображень</span></span>
+<span id="cb12-100"><a href="#cb12-100"></a></span>
+<span id="cb12-101"><a href="#cb12-101"></a><span class="fu">### Табличне представлення даних</span></span>
+<span id="cb12-102"><a href="#cb12-102"></a></span>
+<span id="cb12-103"><a href="#cb12-103"></a>Візуалізація табличної інформації може бути представлена двома способами:</span>
+<span id="cb12-104"><a href="#cb12-104"></a></span>
+<span id="cb12-105"><a href="#cb12-105"></a>-<span class="co">[</span><span class="ot">x</span><span class="co">]</span> у вигляді розмітки;</span>
+<span id="cb12-106"><a href="#cb12-106"></a></span>
+<span id="cb12-107"><a href="#cb12-107"></a>-<span class="co">[</span><span class="ot">x</span><span class="co">]</span> візуалізація датафрейму.</span>
+<span id="cb12-108"><a href="#cb12-108"></a></span>
+<span id="cb12-109"><a href="#cb12-109"></a><span class="in">```</span></span>
+<span id="cb12-110"><a href="#cb12-110"></a><span class="in">| fruit  | price  |</span></span>
+<span id="cb12-111"><a href="#cb12-111"></a><span class="in">|--------|--------:</span></span>
+<span id="cb12-112"><a href="#cb12-112"></a><span class="in">| apple  | 2.05   |</span></span>
+<span id="cb12-113"><a href="#cb12-113"></a><span class="in">| pear   | 1.37   |</span></span>
+<span id="cb12-114"><a href="#cb12-114"></a><span class="in">| orange | 3.09   |</span></span>
+<span id="cb12-115"><a href="#cb12-115"></a></span>
+<span id="cb12-116"><a href="#cb12-116"></a><span class="in">: Ціна на фрукти {tbl-colwidths="[60,40]"}</span></span>
+<span id="cb12-117"><a href="#cb12-117"></a><span class="in">```</span></span>
+<span id="cb12-118"><a href="#cb12-118"></a></span>
+<span id="cb12-119"><a href="#cb12-119"></a>Для публікації інформації з наявного датафрейму можна використовувати використати звичайну виведення:</span>
+<span id="cb12-120"><a href="#cb12-120"></a></span>
+<span id="cb12-123"><a href="#cb12-123"></a><span class="in">```{r}</span></span>
+<span id="cb12-124"><a href="#cb12-124"></a>  mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb12-125"><a href="#cb12-125"></a><span class="in">```</span></span>
+<span id="cb12-126"><a href="#cb12-126"></a></span>
+<span id="cb12-127"><a href="#cb12-127"></a>Проте візуально інформацію зручніше візуалізувати за допомогою функції <span class="in">`knitr::kable()`</span> та з використання спеціальних підписів у заголовку коду:</span>
+<span id="cb12-128"><a href="#cb12-128"></a></span>
+<span id="cb12-131"><a href="#cb12-131"></a><span class="in">```{r}</span></span>
+<span id="cb12-132"><a href="#cb12-132"></a><span class="co">#| label: mtcars-table</span></span>
+<span id="cb12-133"><a href="#cb12-133"></a><span class="co">#| tbl-cap: "Назва таблиці"</span></span>
+<span id="cb12-134"><a href="#cb12-134"></a><span class="co">#| tbl-cap-location: top</span></span>
+<span id="cb12-135"><a href="#cb12-135"></a><span class="co">#| tbl-subcap: "Джерело: дані з пакету carData"</span></span>
+<span id="cb12-136"><a href="#cb12-136"></a></span>
+<span id="cb12-137"><a href="#cb12-137"></a>knitr<span class="sc">::</span><span class="fu">kable</span>(</span>
+<span id="cb12-138"><a href="#cb12-138"></a>  mtcars[<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>, <span class="dv">1</span><span class="sc">:</span><span class="dv">5</span>]</span>
+<span id="cb12-139"><a href="#cb12-139"></a>)</span>
+<span id="cb12-140"><a href="#cb12-140"></a><span class="in">```</span></span>
+<span id="cb12-141"><a href="#cb12-141"></a></span>
+<span id="cb12-142"><a href="#cb12-142"></a><span class="fu">### Побудова діаграм та графіків</span></span>
+<span id="cb12-143"><a href="#cb12-143"></a></span>
+<span id="cb12-146"><a href="#cb12-146"></a><span class="in">```{r}</span></span>
+<span id="cb12-147"><a href="#cb12-147"></a><span class="co">#| label: fig-cap-margin</span></span>
+<span id="cb12-148"><a href="#cb12-148"></a><span class="co">#| fig-cap: "MPG vs horsepower, colored by transmission."</span></span>
+<span id="cb12-149"><a href="#cb12-149"></a><span class="co">#| cap-location: bottom</span></span>
+<span id="cb12-150"><a href="#cb12-150"></a><span class="co">#| fig-subcap: "Дані з пакету `CarData`"</span></span>
+<span id="cb12-151"><a href="#cb12-151"></a></span>
+<span id="cb12-152"><a href="#cb12-152"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb12-153"><a href="#cb12-153"></a>mtcars2 <span class="ot">&lt;-</span> mtcars</span>
+<span id="cb12-154"><a href="#cb12-154"></a>mtcars2<span class="sc">$</span>am <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb12-155"><a href="#cb12-155"></a>  mtcars<span class="sc">$</span>am, <span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'automatic'</span>, <span class="st">'manual'</span>)</span>
+<span id="cb12-156"><a href="#cb12-156"></a>)</span>
+<span id="cb12-157"><a href="#cb12-157"></a><span class="fu">ggplot</span>(mtcars2, <span class="fu">aes</span>(hp, mpg, <span class="at">color =</span> am)) <span class="sc">+</span></span>
+<span id="cb12-158"><a href="#cb12-158"></a>  <span class="fu">geom_point</span>() <span class="sc">+</span>  <span class="fu">geom_smooth</span>(<span class="at">formula =</span> y <span class="sc">~</span> x, <span class="at">method =</span> <span class="st">"loess"</span>) <span class="sc">+</span></span>
+<span id="cb12-159"><a href="#cb12-159"></a>  <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'bottom'</span>)</span>
+<span id="cb12-160"><a href="#cb12-160"></a><span class="in">```</span></span>
+<span id="cb12-161"><a href="#cb12-161"></a></span>
+<span id="cb12-162"><a href="#cb12-162"></a><span class="fu">### Формули та числові позначення</span></span>
+<span id="cb12-163"><a href="#cb12-163"></a></span>
+<span id="cb12-164"><a href="#cb12-164"></a><span class="fu">## Висновки</span></span>
+<span id="cb12-165"><a href="#cb12-165"></a></span>
+<span id="cb12-166"><a href="#cb12-166"></a><span class="fu">## Список використаних джерел</span></span>
+<span id="cb12-167"><a href="#cb12-167"></a></span>
+<span id="cb12-168"><a href="#cb12-168"></a><span class="ss">1. </span>https://quarto.org/</span>
+<span id="cb12-169"><a href="#cb12-169"></a></span>
+<span id="cb12-172"><a href="#cb12-172"></a><span class="in">```{r}</span></span>
+<span id="cb12-173"><a href="#cb12-173"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb12-174"><a href="#cb12-174"></a><span class="in">```</span></span>
+</code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+</body></html>
